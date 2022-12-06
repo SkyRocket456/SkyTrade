@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="product_screen" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ProductPage.ProductPageController">
+    <children>
+        <Text fx:id="Title" layoutX="540.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              wrappingWidth="620.9999904632568">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Text>
+        <Text layoutX="539.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition:">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </Text>
+        <ImageView fx:id="ProductImage" fitHeight="350.0" fitWidth="350.0" layoutX="119.0" layoutY="71.0"
+                   pickOnBounds="true" preserveRatio="true"/>
+        <Text fx:id="Condition" layoutX="648.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0">
+            <font>
+                <Font size="17.0"/>
+            </font>
+        </Text>
+        <Text layoutX="540.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Left:">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </Text>
+        <Text fx:id="Time_Left" layoutX="648.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0">
+            <font>
+                <Font size="17.0"/>
+            </font>
+        </Text>
+        <Text fx:id="current_bid_string" layoutX="540.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Current Bid:">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </Text>
+        <Text fx:id="current_bid" layoutX="666.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0">
+            <font>
+                <Font size="17.0"/>
+            </font>
+        </Text>
+        <TextField fx:id="bid_amount" alignment="CENTER" focusTraversable="false" layoutX="835.0" layoutY="277.0"
+                   prefHeight="33.0" prefWidth="123.0" promptText="Bid Amount"/>
+        <Button fx:id="bid_button" alignment="CENTER" layoutX="700.0" layoutY="277.0" mnemonicParsing="false"
+                prefHeight="33.0" prefWidth="123.0" style="-fx-background-color: #5C94F5;" text="Place Bid"
+                textFill="WHITE">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Button>
+        <Text layoutX="577.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shipping:">
+            <font>
+                <Font name="Arial" size="17.0"/>
+            </font>
+        </Text>
+        <Text fx:id="shippingCost" layoutX="666.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Text>
+        <Text layoutX="679.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ships from United States"
+              textAlignment="CENTER" wrappingWidth="333.0">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Text>
+        <Text layoutX="552.0" layoutY="473.0" strokeType="OUTSIDE" strokeWidth="0.0"/>
+        <Text layoutX="539.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bid History">
+            <font>
+                <Font name="System Bold" size="25.0"/>
+            </font>
+        </Text>
+        <TextArea fx:id="Description" editable="false" layoutX="122.0" layoutY="442.0" prefHeight="107.0"
+                  prefWidth="343.0" style="-fx-background-color: transparent;" wrapText="true">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </TextArea>
+        <AnchorPane layoutX="123.0" layoutY="557.0" prefHeight="83.0" prefWidth="343.0">
+            <children>
+                <Text layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seller Information">
+                    <font>
+                        <Font name="System Bold" size="25.0"/>
+                    </font>
+                </Text>
+                <Text fx:id="Seller" fill="#c97b4d" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      wrappingWidth="383.00000190734863">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+        <Line endX="402.0" layoutX="738.0" layoutY="360.0" startX="-195.0"/>
+        <ScrollPane fx:id="bid_history" layoutX="542.0" layoutY="479.0" prefHeight="144.0" prefWidth="585.0">
+            <content>
+                <GridPane fx:id="bids" gridLinesVisible="true">
+                </GridPane>
+            </content>
+        </ScrollPane>
+        <Text layoutX="542.0" layoutY="644.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bids:">
+            <font>
+                <Font size="19.0"/>
+            </font>
+        </Text>
+        <Text fx:id="bid_num" layoutX="587.0" layoutY="644.0" strokeType="OUTSIDE" strokeWidth="0.0">
+            <font>
+                <Font size="19.0"/>
+            </font>
+        </Text>
+        <Text fx:id="bid_minimum" layoutX="700.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0"/>
+    </children>
+</AnchorPane>
